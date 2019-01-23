@@ -30,6 +30,20 @@ print(A[0])
 print(A[0, 1]) # Access the second item of the first row
 print(A[:, 1]) # Access the second column
 
+# Manipulating Data set
+np.column_stack((zeroes,data,ones)) # using column_stack function we can append the dataset together
+
+dataframe[featurename].unique() # this command gives the unique value in that particular feature.
+data[featurename].nunique()  # gives the count of rows with different feature value
+The best approach is to use dataframe.shape[0] method to find the number of rows in the datset.
+For instance ## find unique values in target set
+targetvalues = data[featurename].unique()
+'''
+for value in targetvalues:
+    subsetdata = data[data[featurename] == value]
+    print(subsetdata)
+    print('--- no or row in dataset = ', subsetdata.shape[0])
+'''
 # Mathematical operator
 You can use the operations '', '*', '', '+' and '-' on numpy arrays and they operate elementwise.
 For power print(a**2)
